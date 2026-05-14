@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
+const db = require("./config/db");
 
-const port = 3000;
-
+const port = process.PORT || 3000;
 
 
 
