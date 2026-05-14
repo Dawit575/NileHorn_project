@@ -1,0 +1,65 @@
+*{   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    height: 100vh;
+}
+.calculator{
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgb(0,0,0,0.25);
+    width: 300px;
+}
+.output-screen{
+    background-color: #000;
+    color: #0f0;
+    font-size: 2rem;
+    overflow-x: auto;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.Buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+.Buttons button{
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.Buttons button:hover{
+    background-color: #555;
+    transform: scale(1.1);
+}
+.Buttons button:nth-child(2),
+.Buttons button:nth-child(3),
+.Buttons button:nth-child(4),
+.Buttons button:nth-child(8),
+.Buttons button:nth-child(12){
+    background-color: rgb(245, 145, 114);
+}
+.Buttons button:nth-child(16){
+    background-color: rgb(127, 240, 127);
+}
+.Buttons button:nth-child(17){
+    grid-column: span 2;
+}
