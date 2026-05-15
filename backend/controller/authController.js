@@ -17,7 +17,7 @@ export const createAdmin = async (req, res) => {
     createUser(user_name, user_email, hashedPassword, (error, result) => {
       if (error) {
         return res.status(500).json({
-          message: 'Database Error',
+          message: 'Database Error or Email already exists.',
           error,
         });
       }
