@@ -1,6 +1,40 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { findUserByEmail } from '../model/userModel.js';
+import { findUserByEmail,createUser } from '../model/userModel.js';
+import db from '../config/db.js';
+
+export const createUser = async (req,res) => {
+    const {user_name,user_email,user_password} = req.body;
+
+    if(!user_name || !user_email || !user_password){
+      return res.status(400).json({
+        message:"All fields are required."
+      })
+    }
+    try {
+          const hashedPassword = await bcrypt.hash(user_password, 10);
+
+          createUser(user_name, user_email, hashedPassword, (error, result) => {
+            if (error) {
+              return res.status(500).json({
+                message: 'Database Error',
+                error,
+              });
+            }
+
+            return res.status(201).json({
+              message: 'Admin register successfully.',
+              id: result.insertId,
+            });
+          });
+    } catch (error) {
+      return res.status(500).json({
+        message:"Server Error",
+        error:error.message})
+    }
+
+  }
+
 
 export const loginAdmin = (req, res) => {
   const { user_email, user_password } = req.body;
