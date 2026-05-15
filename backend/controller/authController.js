@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { findUserByEmail,createUser } from '../model/userModel.js';
+import { findUserByEmail, createUser } from '../model/userModel.js';
 import db from '../config/db.js';
 
 export const createAdmin = async (req, res) => {
@@ -14,7 +14,7 @@ export const createAdmin = async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(user_password, 10);
 
-    createAdmin(user_name, user_email, hashedPassword, (error, result) => {
+    createUser(user_name, user_email, hashedPassword, (error, result) => {
       if (error) {
         return res.status(500).json({
           message: 'Database Error',
