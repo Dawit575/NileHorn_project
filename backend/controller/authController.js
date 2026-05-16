@@ -17,7 +17,7 @@ export const createAdmin = async (req, res) => {
     createUser(user_name, user_email, hashedPassword, (error, result) => {
       if (error) {
         return res.status(500).json({
-          message: 'Database Error or Email already exists.',
+          message: 'Database Error.',
           error,
         });
       }
@@ -42,7 +42,7 @@ export const loginAdmin = (req, res) => {
   findUserByEmail(user_email, async (error, result) => {
     if (error) {
       return res.status(500).json({
-        message: 'Database Error',
+        message: 'Database Error or Email already exists.',
         error,
       });
     }
@@ -66,6 +66,7 @@ export const loginAdmin = (req, res) => {
     const token = jwt.sign(
       {
         id: user.user_id,
+        user_name:user.user_name,
         email: user.user_email,
       },
       process.env.DB_SECRET,
