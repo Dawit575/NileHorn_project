@@ -7,12 +7,14 @@ import {
   delete_portfolio,
 } from '../controller/portfolioController.js';
 
+import { verifyAdmmin } from '../middleware/authMiddleware.js';
+
   const portfolioRoutes = express.Router();
 
-portfolioRoutes.get("/getAllPortfolio",getAll);
-portfolioRoutes.get("/getById/id/:id",getById);
-portfolioRoutes.post('/createPortfolio', addPortfolio);
-portfolioRoutes.put('/editPortfolio/:id', editPortfolio);
-portfolioRoutes.delete('/deletePortfolio/:id', delete_portfolio);
+portfolioRoutes.get('/getAllPortfolio', getAll);
+portfolioRoutes.get('/getById/:id', getById);
+portfolioRoutes.post('/createPortfolio', verifyAdmmin, addPortfolio);
+portfolioRoutes.put('/editPortfolio/:id', verifyAdmmin, editPortfolio);
+portfolioRoutes.delete('/deletePortfolio/:id', verifyAdmmin, delete_portfolio);
 
 export default portfolioRoutes;
