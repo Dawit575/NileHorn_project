@@ -1,4 +1,8 @@
-import { getAllPortfolio,getPortfolioById,createPortfolio,updatePortfolio,deletePortfolio } from "../model/portfolioModel.js";
+import { getAllPortfolio,
+        getPortfolioById,
+        createPortfolio,
+        updatePortfolio,
+        deletePortfolio } from "../model/portfolioModel.js";
 
 export const getAll = (req,res) => {
   getAllPortfolio((error, result) => {
@@ -43,21 +47,24 @@ export const editPortfolio = (req,res) => {
     }
 
     if(result.affectedRows === 0){
-      return res.status(404).json({ message: 'Portfolio is not found.' });
+      return res.status(404).json({ message: 'Portfolio is not found.',error });
     }
 
-    return res.status(201).json({message:"Your portfolio is updated successfully."})
+    return res.status(200).json({message:"Your portfolio is updated successfully."})
   })
 }
 
 export const delete_portfolio = (req,res) => {
-    if (error) {
-      return res.status(500).json({ message: 'Database error', error });
-    }
+  deletePortfolio(req.params.id,(error,result) => {
+        if (error) {
+          return res.status(500).json({ message: 'Database error', error });
+        }
 
-    if (result.affectedRows === 0) {
-      return res.status(404).json({ message: 'Portfolio is not found.' });
-    }
+        if (result.affectedRows === 0) {
+          return res.status(404).json({ message: 'Portfolio is not found.' });
+        }
 
-    return res.status(201).json({message:"Portfolio deleted successfully."})
+        return res.status(200).json({ message: 'Portfolio deleted successfully.' });
+  })
+
 }
