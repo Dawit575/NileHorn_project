@@ -1,0 +1,126 @@
+/* ================= NAVBAR ================= */
+.navbar {
+  width: 100%;
+  height: 75px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+  position: relative;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #38bdf8;
+}
+
+.logo h1 {
+  color: #38bdf8;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ================= NAV LINKS ================= */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Hover animation underline */
+.navLinks li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: #38bdf8;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  color: #38bdf8;
+}
+
+/* ================= MOBILE ================= */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 75px;
+    right: -100%;
+
+    width: 250px;
+    height: calc(100vh - 75px);
+
+    background: #1e293b;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-top: 40px;
+    gap: 25px;
+
+    transition: 0.4s ease-in-out;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  /* ACTIVE MENU */
+  .active {
+    right: 0;
+  }
+
+  .navLinks li a {
+    font-size: 18px;
+  }
+}
