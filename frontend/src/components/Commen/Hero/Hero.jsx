@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Hero.module.css';
-
+import { Link } from 'react-router-dom';
 function Hero() {
   return (
     <section className={style.hero}>
@@ -16,8 +16,8 @@ function Hero() {
           specialize in JavaScript, React, Node.js, and problem solving with Data Structure and Algorithms.
         </p>
         <div className={style.buttons}>
-          <button className={style.primaryBtn}>Get Started</button>
-          <button className={style.secondaryBtn}>Watch Videos</button>
+          <Link to= '/portfolio' className={style.primaryBtn}>See Portfolio</Link>
+          <Link to= '/service' className={style.secondaryBtn}>Service</Link>
         </div>
       </div>
     </section>

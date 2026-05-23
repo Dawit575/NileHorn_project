@@ -53,17 +53,23 @@
 .buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 .primaryBtn,
 .secondaryBtn {
-  padding: 14px 30px;
+  text-decoration: none;
+  padding: 14px 32px;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  cursor: pointer;
   transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .primaryBtn {
   border: none;
