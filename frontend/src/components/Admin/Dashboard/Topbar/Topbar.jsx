@@ -1,11 +1,25 @@
-import React from 'react'
+import React from 'react';
+import styles from './Topbar.module.css';
+import admin_logo from '../../../../assets/images/admin.jfif';
 
 function Topbar() {
   return (
-    <div>
-      <h1>This is admin topbar</h1>
+    <div className={styles.topbar}>
+
+      <div className={styles.left}>
+        <h2>Dashboard</h2>
+      </div>
+
+      <div className={styles.right}>
+        <input type="text" placeholder="Search..." className={styles.search} />
+
+        <div className={styles.profile}>
+          <img className={styles.admin_logo} src={admin_logo} alt="admin_logo" />
+          <span>Dawit</span>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Topbar
+export default Topbar;

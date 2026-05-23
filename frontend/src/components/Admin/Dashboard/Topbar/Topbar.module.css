@@ -1,0 +1,191 @@
+
+.topbar {
+  width: 100%;
+  height: 75px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 25px;
+
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  animation: slideDown 0.5s ease-out;
+
+  box-sizing: border-box;
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.left h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+
+  background: linear-gradient(135deg, #ffffff, #f3f3f3);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search {
+  width: 230px;
+
+  padding: 12px 18px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-size: 0.95rem;
+
+  backdrop-filter: blur(5px);
+
+  transition: all 0.3s ease;
+}
+
+.search::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.search:focus {
+  background: rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.03);
+}
+
+.admin_logo {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid rgba(255, 255, 255, 0.5);
+
+  transition: all 0.3s ease;
+}
+
+.profile:hover .admin_logo {
+  border-color: #ffffff;
+
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.profile span {
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .search {
+    width: 180px;
+  }
+
+  .left h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topbar {
+    height: 70px;
+
+    padding: 0 15px;
+  }
+
+  .search {
+    width: 140px;
+
+    padding: 10px 15px;
+  }
+
+  .profile span {
+    display: none;
+  }
+
+  .admin_logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .left h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topbar {
+    padding: 0 10px;
+  }
+
+  .left h2 {
+    font-size: 1.1rem;
+  }
+
+  .search {
+    width: 110px;
+
+    padding: 8px 12px;
+
+    font-size: 0.85rem;
+  }
+
+  .admin_logo {
+    width: 35px;
+    height: 35px;
+  }
+}
