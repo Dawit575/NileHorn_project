@@ -8,7 +8,7 @@ function Footer() {
       <div className={style.container}>
         <div className={style.section}>
           <div className={style.logo}>
-            <img src= {logo} alt="logo image" />
+            <img src={logo} alt="logo image" />
             <h1>Alpha Academy</h1>
           </div>
           <p>
@@ -55,8 +55,12 @@ function Footer() {
           <div className={style.socials}>
             <a href="/">Facebook</a>
             <a href="/">YouTube</a>
-            <a href="/">Linkdin</a>
-            <a href="/">GitHub</a>
+            <a href="https://www.linkedin.com/in/bire-tadesse-107b013b3/" target='_blank'>
+            Linkdin</a>
+            
+            <a href="https://github.com/Dawit575" target="_blank">
+              GitHub
+            </a>
           </div>
         </div>
       </div>
