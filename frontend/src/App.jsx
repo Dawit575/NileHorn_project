@@ -5,6 +5,8 @@ import Home from "./pages/public_pages/Home/Home.jsx";
 import About from "./pages/public_pages/About/About.jsx";
 import Services from "./pages/public_pages/Services/Service.jsx";
 import Portfolio from './pages/public_pages/Portfolio/Portfolio.jsx';
+import contact from "./pages/public_pages/Contact/Contact.jsx";
+import login from "./pages/public_pages/Login/Login.jsx"
 function App() {
   return (
     <Routes>
@@ -13,6 +15,8 @@ function App() {
           <Route path='/about' element = {<About/>}/>
           <Route path='/service' element = {<Services/>}/>
           <Route path='/portfolio' element = {<Portfolio/>}/>
+          <Route path='/contact' element = {<contact/>}/>
+          <Route path='/login' element = {<login/>}/>
       </Route>
     </Routes>
   )
