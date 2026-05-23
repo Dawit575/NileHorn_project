@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './Footer.module.css';
-
+import logo from "../../../assets/icons/logo.jfif"
 function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.container}>
-
         <div className={style.section}>
-          <h2 className={style.logo}>Alpha Academy</h2>
+          <div className={style.logo}>
+            <img src= {logo} alt="logo image" />
+            <h1>Alpha Academy</h1>
+          </div>
           <p>
-            Learn JavaScript, React, Node.js, Java, DSA and modern web development step by step.
+            Full Stack Developer sharing modern programming and academic technology skills through
+            practical learning and real-world projects.
           </p>
         </div>
 
