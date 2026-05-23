@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Hero from '../../../components/Commen/Hero/Hero'
 function Contact() {
   return (
     <div>
-      <h1>This is Contact page.</h1>
+      <Hero/>
     </div>
   )
 }

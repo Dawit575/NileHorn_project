@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Hero from '../../../components/Commen/Hero/Hero'
 function Service() {
   return (
     <div>
-      <h1>This is service page.</h1>
+      <Hero/>
     </div>
   )
 }
