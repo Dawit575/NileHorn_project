@@ -53,11 +53,12 @@ function Footer() {
           <h3>Follow Us</h3>
 
           <div className={style.socials}>
-            <a href="/">Facebook</a>
+            <a href="https://www.facebook.com/share/1L3j4DnwbQ" target='_blank'>Facebook</a>
             <a href="/">YouTube</a>
-            <a href="https://www.linkedin.com/in/bire-tadesse-107b013b3/" target='_blank'>
-            Linkdin</a>
-            
+            <a href="https://www.linkedin.com/in/bire-tadesse-107b013b3/" target="_blank">
+              Linkdin
+            </a>
+
             <a href="https://github.com/Dawit575" target="_blank">
               GitHub
             </a>
