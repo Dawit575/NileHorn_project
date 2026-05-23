@@ -28,9 +28,7 @@ function Navbar() {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
+          <Link className={style.login_button} to="/login">Login</Link>
       </ul>
 
       <div className={style.hamburger} onClick={() => setMenuOpen(!menuOpen)}>

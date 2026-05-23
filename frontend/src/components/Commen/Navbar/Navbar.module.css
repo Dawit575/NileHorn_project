@@ -102,7 +102,28 @@
   transform: translateY(-2px);
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+.login_button {
+  background: linear-gradient(135deg, #667eea, #c79ef0);
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
 
+.login_button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+.login_button:active {
+  transform: scale(0.97);
+}
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -148,6 +169,11 @@
 
   .logo h1 {
     font-size: 1.4rem;
+  }
+  
+  .login_button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
   }
 
   .hamburger {
