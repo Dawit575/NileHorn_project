@@ -153,7 +153,7 @@
   }
 
   .navLinks li a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -168,12 +168,12 @@
   }
 
   .logo h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
-  
+
   .login_button {
     padding: 10px 24px;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .hamburger {
@@ -208,7 +208,7 @@
   }
 
   .navLinks li a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 0.8rem 0;
   }
 
@@ -246,11 +246,11 @@
   }
 
   .logo h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .hamburger {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     width: 35px;
     height: 35px;
   }
@@ -261,6 +261,7 @@
   }
 
   .navLinks li a {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
+
 }
