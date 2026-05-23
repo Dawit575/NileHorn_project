@@ -12,7 +12,7 @@ function Navbar() {
         <h1>Alpha</h1>
       </div>
 
-      <ul className={`${style.navLinks} ${menuOpen} ? style.active : ""`}>
+      <ul className={`${style.navLinks} ${menuOpen ? style.active : ''}`}>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -29,18 +29,15 @@ function Navbar() {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
+          <Link to="/login">Login</Link>
         </li>
       </ul>
 
       <div className={style.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
+        {menuOpen ? '✕' : '☰'}
       </div>
     </div>
   );
 }
 
 export default Navbar
-  

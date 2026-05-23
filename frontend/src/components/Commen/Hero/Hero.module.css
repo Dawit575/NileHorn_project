@@ -1,0 +1,137 @@
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../assets/images/Hero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.25),
+    rgba(118, 75, 162, 0.25)
+  );
+  backdrop-filter: blur(1px);
+}
+.content {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 850px;
+  text-align: center;
+  color: white;
+  animation: fadeUp 1s ease;
+}
+.content h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.content h1 span {
+  background: linear-gradient(135deg, #ffffff, #ffd89b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 35px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.primaryBtn,
+.secondaryBtn {
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.primaryBtn {
+  border: none;
+  background: white;
+  color: #764ba2;
+}
+.primaryBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+.secondaryBtn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.secondaryBtn:hover {
+  background: white;
+  color: #764ba2;
+  transform: translateY(-5px);
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 992px) {
+  .content h1 {
+    font-size: 3rem;
+  }
+  .content p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 90vh;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content p {
+    font-size: 1rem;
+  }
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .primaryBtn,
+  .secondaryBtn {
+    width: 220px;
+  }
+}
