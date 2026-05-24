@@ -12,7 +12,7 @@ function Hero() {
           Hi, I'm <span>Dawit</span>
         </h1>
 
-        <h2>I create fast and modern websites that people enjoy using.</h2>
+        <h2>I build fast, modern web experiences people actually enjoy using</h2>
 
         <div className={style.buttons}>
           <Link to="/portfolio" className={style.primaryBtn}>
