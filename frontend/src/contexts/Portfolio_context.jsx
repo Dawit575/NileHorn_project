@@ -41,9 +41,9 @@ export const PortfolioProvider = ({ children }) => {
   const addProject = async (projectData) => {
     try {
       await api.post('/portfolio-routes/createPortfolio', projectData, {
-        headers: {
-          Authorization: token,
-        },
+      headers: {
+        Authorization: `Bearer ${token}`,
+    },
       });
 
       fetchProjects();
@@ -55,7 +55,7 @@ export const PortfolioProvider = ({ children }) => {
     try {
       await api.put(`/portfolio-routes/editPortfolio/${id}`, updateData, {
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
         },
       });
       fetchProjects();
@@ -67,7 +67,7 @@ export const PortfolioProvider = ({ children }) => {
     try {
       await api.delete(`/portfolio-routes/deletePortfolio/${id}`, {
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
         },
       });
 
