@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { usePortfolio } from '../../../contexts/Portfolio_context.jsx';
 import style from './AddPortfolio.module.css';
+import toast from 'react-hot-toast';
 
 function AddPortfolio({ close }) {
   const { addProject } = usePortfolio();
