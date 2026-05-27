@@ -1,11 +1,26 @@
-import React from 'react'
+import React from 'react';
+import style from './Service.module.css';
 
-function Services_Grid() {
+function Service_Grid({ services }) {
   return (
-    <div>
-      <h1>This is services grid component</h1>
+    <div className={style.container}>
+      {services.length === 0 ? (
+        <p className={style.empty}>No services available</p>
+      ) : (
+        <div className={style.grid}>
+          {services.map((service, index) => (
+            <div key={index} className={style.card}>
+              <div className={style.icon}>{service.icon || '⚡'}</div>
+
+              <h3 className={style.title}>{service.title}</h3>
+
+              <p className={style.desc}>{service.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Services_Grid
+export default Service_Grid;
