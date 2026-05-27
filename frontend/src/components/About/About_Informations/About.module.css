@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 60px 20px;
+  background:linear-gradient(135deg, #9679e7, #8b6fe0);
+
+  gap: 25px;
+}
+
+.about {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  background: linear-gradient(135deg, #38363b, #362d2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profileSection {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg,white,pink);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.image {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid rgba(231, 229, 229, 0.3);
+  box-shadow: 0 10px 30px rgba(121, 220, 238, 0.4);
+
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.infoSection {
+  max-width: 750px;
+
+  text-align: center;
+
+  background: rgba(208, 182, 223, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding: 25px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+  backdrop-filter: blur(10px);
+}
+
+.name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 15px;
+}
+
+.bio {
+  font-size: 1.2rem;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.location {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .about {
+    font-size: 2rem;
+  }
+
+  .image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .infoSection {
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+}

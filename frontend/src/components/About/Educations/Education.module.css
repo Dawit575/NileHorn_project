@@ -1,0 +1,84 @@
+.container {
+  padding: 60px 20px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #b09ee0, #7f5af0);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+
+  background: linear-gradient(135deg, #26252b, #020103);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+  padding-left: 25px;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+
+.content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding: 18px;
+  border-radius: 14px;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.3s ease;
+}
+
+.content:hover {
+  transform: translateX(6px);
+}
+
+.year {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.school {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.degree {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.desc {
+  font-size: 0.95rem;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 18px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .school {
+    font-size: 1.1rem;
+  }
+}
