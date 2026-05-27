@@ -1,0 +1,64 @@
+.container {
+  min-height: 100vh;
+  padding: 80px 20px;
+
+  color: white;
+  background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+
+  background: linear-gradient(135deg, #9d81eb, #7f5af0, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* WHY SECTION */
+.why {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* FEATURES GRID */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.features div {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: 0.3s;
+}
+
+.features div:hover {
+  transform: translateY(-5px);
+  background: rgba(127, 90, 240, 0.15);
+}
