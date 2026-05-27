@@ -23,7 +23,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -50,19 +49,16 @@
     transform: scale(0.85);
     opacity: 0;
   }
-
   to {
     transform: scale(1);
     opacity: 1;
   }
 }
 
-/* TITLE */
 .modal h2 {
   margin-bottom: 15px;
 
   font-size: 1.5rem;
-
   font-weight: bold;
 
   text-align: center;
@@ -75,16 +71,40 @@
   color: transparent;
 }
 
-/* INPUTS */
-.input {
+.image {
   width: 100%;
+  height: 180px;
 
-  padding: 12px 14px;
+  object-fit: cover;
+
+  border-radius: 12px;
 
   margin-bottom: 12px;
+}
 
-  border: none;
-  outline: none;
+.text {
+  font-size: 0.95rem;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  margin-bottom: 15px;
+
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.link {
+  flex: 1;
+
+  text-align: center;
+
+  padding: 8px 10px;
 
   border-radius: 10px;
 
@@ -92,59 +112,21 @@
 
   color: white;
 
-  font-size: 0.95rem;
+  text-decoration: none;
 
-  backdrop-filter: blur(5px);
-
-  transition: 0.3s ease;
-}
-
-.input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.input:focus {
-  background: rgba(255, 255, 255, 0.25);
-
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-/* BUTTON GROUP */
-.btnGroup {
-  display: flex;
-  gap: 10px;
-
-  margin-top: 10px;
-}
-
-/* SAVE BUTTON */
-.saveBtn {
-  flex: 1;
-
-  padding: 10px;
-
-  border: none;
-
-  border-radius: 10px;
-
-  background: #22c55e;
-
-  color: white;
-
-  cursor: pointer;
+  font-size: 0.9rem;
 
   transition: 0.3s ease;
 }
 
-.saveBtn:hover {
-  background: #16a34a;
+.link:hover {
+  background: rgba(255, 255, 255, 0.3);
 
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* CANCEL BUTTON */
-.cancelBtn {
-  flex: 1;
+.closeBtn {
+  width: 100%;
 
   padding: 10px;
 
@@ -158,23 +140,24 @@
 
   cursor: pointer;
 
+  font-size: 0.95rem;
+
   transition: 0.3s ease;
 }
 
-.cancelBtn:hover {
+.closeBtn:hover {
   background: #dc2626;
 
   transform: scale(1.03);
 }
 
-/* RESPONSIVE */
 @media screen and (max-width: 480px) {
   .modal {
     width: 90%;
     padding: 20px;
   }
 
-  .btnGroup {
+  .links {
     flex-direction: column;
   }
 }
