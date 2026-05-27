@@ -55,37 +55,6 @@
   gap: 20px;
 }
 
-.search {
-  width: 230px;
-
-  padding: 12px 18px;
-  margin-right: 30px;
-  border: none;
-  outline: none;
-
-  border-radius: 50px;
-
-  background: rgba(255, 255, 255, 0.15);
-
-  color: white;
-
-  font-size: 0.95rem;
-
-  backdrop-filter: blur(5px);
-
-  transition: all 0.3s ease;
-}
-
-.search::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.search:focus {
-  background: rgba(255, 255, 255, 0.25);
-
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
 .profile {
   display: flex;
   align-items: center;

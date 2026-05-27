@@ -11,7 +11,6 @@ function Topbar() {
       </div>
 
       <div className={styles.right}>
-        <input type="text" placeholder="Search..." className={styles.search} />
 
         <div className={styles.profile}>
           <img className={styles.admin_logo} src={admin_logo} alt="admin_logo" />
