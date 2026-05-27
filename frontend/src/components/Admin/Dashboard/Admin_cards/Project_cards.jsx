@@ -21,7 +21,7 @@ function Project_cards({ project, openViewModal, openUpdateModal, deleteProject 
 
         <button
           className={style.delete_btn}
-          onClick={() => deleteProject(project.id || project._id)}
+          onClick={() => deleteProject(project.id)}
         >
           Delete
         </button>
