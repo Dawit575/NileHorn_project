@@ -1,11 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 
 dotenv.config();
 
 import './config/db.js';
-import router  from './routes/authRoutes.js';
+import router from './routes/authRoutes.js';
 import portfolioRoutes from './routes/portfolioRoutes.js';
 
 const app = express();
@@ -13,8 +14,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
+
+// ROUTES
 app.use('/api/auth-routes', router);
-app.use('/api/portfolio-routes',portfolioRoutes);
+app.use('/api/portfolio-routes', portfolioRoutes);
 
 const port = process.env.PORT || 3000;
 
