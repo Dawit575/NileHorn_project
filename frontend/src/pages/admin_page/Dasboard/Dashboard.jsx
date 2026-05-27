@@ -65,7 +65,7 @@ function Dashboard() {
       <div className={style.top_actions}>
         <input
           type="text"
-          placeholder="Search projects..."
+          placeholder="Search projects by title..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className={style.search}
