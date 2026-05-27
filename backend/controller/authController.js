@@ -17,7 +17,7 @@ export const createAdmin = async (req, res) => {
     createUser(user_name, user_email, hashedPassword, (error, result) => {
       if (error) {
         return res.status(500).json({
-          message: 'Database Error.',
+          message: 'Database Error.'.error,
           error,
         });
       }
@@ -80,7 +80,7 @@ export const loginAdmin = (req, res) => {
       token,
       user: {
         id: user.user_id,
-        email: user.user_email,
+        name: user.user_name,
       },
     });
   });
