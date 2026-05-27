@@ -43,7 +43,7 @@
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
 
   color: #ffffff;
@@ -51,10 +51,11 @@
   letter-spacing: 0.5px;
 }
 
-.disc {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
+.project_card .disc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
   line-height: 1.6;
+  opacity: 0.9;
 }
 
 .actions {
