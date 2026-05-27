@@ -1,0 +1,164 @@
+
+
+.container {
+  width: 100%;
+  padding: 90px 8%;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #312e81
+  );
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageBox {
+  width: 350px;
+  height: 420px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right {
+  flex: 1;
+}
+
+.subtitle {
+  color: #a855f7;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 46px;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.description {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+
+.infoContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px 20px;
+  border-radius: 20px;
+  min-width: 150px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(168, 85, 247, 0.2);
+}
+
+.card h3 {
+  font-size: 28px;
+  color: #c084fc;
+  margin-bottom: 10px;
+}
+
+.card span {
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+
+.button {
+  margin-top: 40px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #7c3aed
+  );
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+
+@media (max-width: 992px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .imageBox {
+    width: 300px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 70px 5%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .imageBox {
+    width: 100%;
+    max-width: 320px;
+    height: 350px;
+  }
+}
